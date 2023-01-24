@@ -23,7 +23,9 @@ const MyBill = ({ bill }) => {
   const handleStatusStyling = (status) => {
     if(status === 'Paid'){
       return { background: 'lightgreen'}
-    } 
+    } else if(status === 'Overdue'){
+      return { background: 'lightcoral'}
+    }
   }
 
 	return(
