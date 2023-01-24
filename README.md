@@ -2,4 +2,4 @@
 
 Live Demo: https://resonant-khapse-7cf560.netlify.app/
 
-YouTube Video: Coming Soon!
+<a href="https://youtu.be/Uo-UlHvIfpA" target="_blank">YouTube Video</a>
