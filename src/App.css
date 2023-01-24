@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 500px;
+.App {
+  text-align: center;
 }
 
 .my-bill-container {
-  margin: 16px 0;
-  width: 100%;
+  margin: 16px auto;
   border: 2px solid black;
-  padding-left: 6px;
+  max-width: 400px;
+}
+
+.water {
+  color: blue;
 }

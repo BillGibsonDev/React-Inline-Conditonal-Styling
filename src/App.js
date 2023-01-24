@@ -1,12 +1,16 @@
 import './App.css';
-import { Data } from './Data.js';
 
-export default function App(){
-	return(
-    <div className="app">
+import { Data } from './Data';
+
+function App() {
+
+  return (
+    <div className="App">
+      <h1>Hey YouTube</h1>
+      <h1>React Inline Styling with Conditionals??</h1>
       {
         Data.map((bill, key) => {
-          return(
+          return (
             <MyBill
               bill={bill}
               key={key}
@@ -15,23 +19,31 @@ export default function App(){
         })
       }
     </div>
-  )
+  );
 }
 
-const MyBill = ({ bill }) => {
+export default App;
 
-  const handleStatusStyling = (status) => {
-    if(status === 'Paid'){
-      return { background: 'lightgreen'}
-    } else if(status === 'Overdue'){
+const MyBill = ({bill}) => {
+
+  const handleStatus = (status) => {
+    if (status === 'Overdue'){
       return { background: 'lightcoral'}
+    } else if (status === 'Paid'){
+      return { background: "lightgreen" }
     }
   }
 
-	return(
-    <div className="my-bill-container" style={handleStatusStyling(bill.status)}>
+  const handleType = (type) => {
+    if (type === 'Water'){
+      return 'water'
+    }
+  }
+
+  return (
+    <div className={`my-bill-container ${handleType(bill.type)}`} style={ handleStatus(bill.status)}>
       <h2>{bill.type}</h2>
-      <h2>Amount: {bill.amount}</h2>
+      <h2>Amount: ${bill.amount}</h2>
       <h2>Status: {bill.status}</h2>
     </div>
   )
